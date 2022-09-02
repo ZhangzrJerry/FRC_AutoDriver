@@ -1,6 +1,9 @@
 package frc.robot.standard;
 import java.lang.Math;
 
+/**
+ * 提供了一个标准的记录机器人状态的类。可以是全局状态，也可以是增量状态
+ */
 public class StatusXYW {
 
     double x = 0;
