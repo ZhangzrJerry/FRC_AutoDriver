@@ -13,14 +13,14 @@ public class StatusXYW {
     /**
      *  默认构造函数
      */
-    StatusXYW(){
+    public StatusXYW(){
 
     }
 
     /**
      *  深拷贝构造函数
      */
-    StatusXYW(StatusXYW that){
+    public StatusXYW(StatusXYW that){
         this.x = that.x;
         this.y = that.y;
         this.w = that.w;
@@ -30,7 +30,7 @@ public class StatusXYW {
      * 带参构造函数
      * @param w 角度制
      */
-    StatusXYW(double x,double y,double w){
+    public StatusXYW(double x,double y,double w){
         this.x = x;
         this.y = y;
         this.w = w;
