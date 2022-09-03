@@ -45,6 +45,16 @@ public class PathSub {
         return temp;
     }
 
+    /**
+     * 用于画出场地边界、场地障碍物、其他队伍自动阶段会占用的空间
+     * @param x_begin 起始点的横坐标
+     * @param y_begin 起始点的纵坐标
+     * @param x_end 结束点的横坐标
+     * @param y_end 结束的的纵坐标
+     * @param value 画出线的斥力值
+     * @param replace 假则不对mymap进行修改
+     * @return
+     */
     public MyMatrix draw_line(int x_begin,int y_begin,int x_end,int y_end,double value,boolean replace){
         MyMatrix temp = new MyMatrix(mymap.shape()[0],mymap.shape()[1]);
         int ymin = y_begin < y_end ? y_begin : y_end;

@@ -28,9 +28,6 @@ public class StatusXYW {
 
     /**
      * 带参构造函数
-     * @param x 单位：cm
-     * @param y 单位：cm
-     * @param w 单位：角度
      */
     public StatusXYW(double x,double y,double w){
         this.x = x;
@@ -38,6 +35,15 @@ public class StatusXYW {
         this.w = w;
     }
     
+    /**
+     * 位姿更新
+     */
+    public void set(double x,double y,double w){
+        this.x = x;
+        this.y = y;
+        this.w = w;
+    }
+
     /**
      * 齐次坐标变换更新
      * @param delta 含有x,y,w变化量的StatusXYW
