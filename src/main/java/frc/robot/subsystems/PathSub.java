@@ -82,7 +82,7 @@ public class PathSub {
      * @param steps 机器人向前移动的相对步数
      * @return 返回一个StatusXYW对象，记载机器人往哪个方向走，单位：厘米、角度
      */
-    public StatusXYW ahead_drive(StatusXYW robot_status,int steps){
+    public StatusXYW drive_ahead(StatusXYW robot_status,int steps){
         int x = 0;
         int y = 0;
         // 如果这里用while的话，到鞍点没注意的话会卡在这个函数里面，for的话顶多不动
@@ -91,7 +91,31 @@ public class PathSub {
             x += temp[0];
             y += temp[1];
         }
-        double w = Math.tanh((double)y/(double)x);
+        double w = Math.tanh((double)y/(double)x)-robot_status.w;
+        StatusXYW delta = new StatusXYW(x,y,w);
+        return delta;
+    }
+
+    /**
+     * 机器人正方向始终朝着目标
+     * @param robot_status 机器人的实时状态
+     * @param steps 机器人向前移动的相对步数
+     * @param x 目标的横坐标
+     * @param y 目标的纵坐标
+     * @return 返回一个StatusXYW对象，记载机器人往哪个方向走，单位：厘米、角度
+     */
+    public StatusXYW drive_moon(StatusXYW robot_status,int steps,int target_x,int target_y){
+        int x = 0;
+        int y = 0;
+        // 如果这里用while的话，到鞍点没注意的话会卡在这个函数里面，for的话顶多不动
+        for(int i=0;i<steps;i++){
+            int[] temp = this.found(x+(int)robot_status.x,y+(int)robot_status.y);
+            x += temp[0];
+            y += temp[1];
+        }
+        double delta_x = target_x - x - robot_status.x;
+        double delta_y = target_y - y - robot_status.y;
+        double w = Math.tanh(delta_y / delta_x) - robot_status.w;
         StatusXYW delta = new StatusXYW(x,y,w);
         return delta;
     }
