@@ -14,15 +14,20 @@
 
 ### TODO 00 为项目添加文件
 
-你可以使用`git clone`方式或者下载为zip文件，获取本项目的全部代码，请将该文件夹拷贝到相应路径的文件夹，并按照TODO指引完善代码
+你可以使用`git clone`方式或者下载为zip文件，获取本项目的全部代码，请将该文件夹拷贝到你项目中对应路径的文件夹，并按照TODO指引完善代码
+
+*You can use the `git clone` method or download it as a zip file to get all the code of this project, please copy the folder to the folder of your project of the corresponding path, and complete the code according to the TODO guidelines*
 
 > src/main/java/frc/robot/subsystems/PathSub
 
-另外以下文件提供了路径规划的使用示意，可以参考
+另外以下文件提供了路径规划的使用示意
+
+*In addition, the following documents provide instructions for the use of path planning*
 
 > src/main/java/frc/robot/commands/RoboCom.java
 
 ### TODO 01 编写你的逆运动学方法
+Write your inverse kinematics method
 ```java
 // src\main\java\frc\robot\subsystems\DriveSub.java
 /**
@@ -34,6 +39,7 @@ public void driver(StatusXYW delta){
 ```
 
 ### TODO 02 准确定位机器人的初始位置
+Accurately locate the initial position of the robot
 ```java
 // src\main\java\frc\robot\commands\RoboCom.java
 public void auto_init(){
@@ -42,9 +48,13 @@ public void auto_init(){
 }
 ```
 ![images/01.png](https://user-images.githubusercontent.com/87751816/188202864-eeb3a2c2-9f09-4ffc-ae1d-2a5fd030769c.png)
+
 如图所示，以场地左下角为原点，标记出机器的位置和角度，角度为x轴正方向与机器人正方向（自己定义，可以是收球方向、射球方向等）的夹角
 
+*As shown in the figure, take the lower left corner of the field as the origin, mark the position and angle of the machine.*
+
 ### TODO 03 为地图进行标记
+Mark the map
 ```java
 // src\main\java\frc\robot\commands\RoboCom.java
 public void auto_init(){
@@ -61,6 +71,7 @@ public void auto_init(){
 ```
 
 ### TODO 04 获取机器人的实际位置
+Get the actual position of the robot
 ```java
 // src\main\java\frc\robot\commands\RoboCom.java
 public void auto_drive(){
@@ -73,6 +84,7 @@ public void auto_drive(){
 ```
 
 ### TODO 05 选择合适的路径规划方式
+Choose the right path planning method
 ```java
 // src\main\java\frc\robot\commands\RoboCom.java 
 public void auto_drive(){
@@ -82,6 +94,7 @@ public void auto_drive(){
 ```
 
 ### TODO 06 判断机器成功拾球
+Judging that the machine successfully picked up the ball
 ```java
 // src\main\java\frc\robot\commands\RoboCom.java
 public void auto_drive(){
