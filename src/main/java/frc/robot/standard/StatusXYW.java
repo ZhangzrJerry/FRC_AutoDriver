@@ -6,9 +6,9 @@ import java.lang.Math;
  */
 public class StatusXYW {
 
-    double x = 0;
-    double y = 0;
-    double w = 0;
+    public double x = 0;
+    public double y = 0;
+    public double w = 0;
 
     /**
      *  默认构造函数

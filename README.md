@@ -14,12 +14,16 @@
 
 你可以使用`git clone`方式或者下载为zip文件，获取本项目的全部代码，请将以下文件拷贝到对应的文件夹，并按照TODO指引完善
 > src/main/java/frc/robot/subsystems/PathSub.java
+
 > src/main/java/frc/robot/subsystems/PoseSub.java
+
 > src/main/java/frc/robot/subsystems/DriveSub.java
+
 > src/main/java/frc/robot/standard/StatusXYW.java
 
 另外以下文件提供了`auto_init`和`auto_drive`的使用示意，可以在自己的项目中参考该写法
 > src/main/java/frc/robot/commands/RoboCom.java
+
 > src/main/java/frc/robot/Robot.java
 
 ### TODO 01 准确定位机器人的初始位置
