@@ -18,7 +18,7 @@ public class StatusXYW {
     }
 
     /**
-     *  深拷贝构造函数
+     *  深拷贝复制
      */
     public StatusXYW(StatusXYW that){
         this.x = that.x;
@@ -28,7 +28,9 @@ public class StatusXYW {
 
     /**
      * 带参构造函数
-     * @param w 角度制
+     * @param x 单位：cm
+     * @param y 单位：cm
+     * @param w 单位：角度
      */
     public StatusXYW(double x,double y,double w){
         this.x = x;
