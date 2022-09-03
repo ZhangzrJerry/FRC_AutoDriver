@@ -1,7 +1,5 @@
-package frc.robot.subsystems;
+package frc.robot.subsystems.PathSub;
 
-import frc.robot.standard.MyMatrix;
-import frc.robot.standard.StatusXYW;
 import java.lang.Math;
 
 public class PathSub {
